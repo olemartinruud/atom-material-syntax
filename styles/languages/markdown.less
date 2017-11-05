@@ -1,0 +1,159 @@
+// 3.syntax--
+// Define custom markdown styles
+// ----------------------------------------
+// Below is an incomplete list of markdown elements you might want to style
+// differently from the default markup elements defined above.syntax-- All styles are
+// empty, primarily to give you an idea of what's possible.syntax--
+
+.syntax--text.syntax--md {
+  .syntax--md {
+
+    &.syntax--heading {
+      > .syntax--punctuation {}
+      &.syntax--empty {
+        .syntax--punctuation {}
+      }
+    }
+
+    &.syntax--hr {
+      color: @pubster-color-string;
+    }
+    &.syntax--quote {}
+
+    &.syntax--link {
+      color: @pubster-color-variable;
+      .syntax--string {
+        color: @pubster-color-header;
+      }
+      &.syntax--text {}
+      &.syntax--destination {
+        .syntax--uri {}
+        text-decoration: underline;
+      }
+      &.syntax--label {}
+      &.syntax--title {
+        font-style: italic;
+      }
+      &.syntax--auto {
+        &.syntax--email {}
+      }
+      &.syntax--reference {
+        &.syntax--abbreviation {}
+      }
+      &.syntax--footnote {
+        &.syntax--reference {}
+        &.syntax--definition {}
+      }
+    }
+
+    &.syntax--gfm {
+      &.syntax--reference {
+        .syntax--mention {}
+        .syntax--issue {}
+        .syntax--user {}
+        .syntax--repository {}
+        .syntax--sha {}
+
+        &.syntax--class {}
+        &.syntax--method {
+          &.syntax--instance {}
+          &.syntax--class {}
+        }
+      }
+
+      &.syntax--emoji {}
+    }
+
+    &.syntax--constant {
+      &.syntax--entity {}
+      &.syntax--escape {}
+      &.syntax--line-break {}
+    }
+
+    &.syntax--reference {
+      &.syntax--class {}
+      &.syntax--link {}
+    }
+
+    &.syntax--list {
+      > .syntax--punctuation {
+        &.syntax--checkbox {}
+      }
+
+      &.syntax--unordered {}
+      &.syntax--ordered {}
+      &.syntax--empty {}
+
+      &.syntax--task {
+        &.syntax--completed {}
+      }
+
+      &.syntax--definition {}
+    }
+
+    &.syntax--code {
+      &:not(.syntax--fenced) {
+        background: fade(@_neutral, 10%)
+      }
+
+      &.syntax--fenced {
+        .syntax--punctuation.syntax--md {
+          color: @pubster-color-header;
+          font-style: italic;
+        }
+        &.syntax--info {}
+      }
+
+      &.syntax--raw {}
+    }
+
+    &.syntax--constant {
+      &.syntax--language {
+        color: @pubster-color-header;
+        font-style: italic;
+      }
+    }
+
+    &.syntax--emphasis {
+      &:not(.syntax--strong) {}
+
+      &:not(.syntax--strong) .syntax--strong {
+        font-style: italic;
+      }
+    }
+
+    &.syntax--strong {}
+
+    &.syntax--table {
+      > .syntax--punctuation {
+        &.syntax--alignment {}
+      }
+    }
+
+    &.syntax--strike {}
+
+    &.syntax--critic {
+      &.syntax--addition {
+
+    }
+      &.syntax--deletion {}
+      &.syntax--comment {}
+      &.syntax--highlight {}
+      &.syntax--substitution {}
+    }
+
+    &.syntax--special-attributes {}
+
+    &.syntax--attribute {
+      &.syntax--special {
+        &.syntax--other {}
+        &.syntax--id {}
+        &.syntax--class {}
+      }
+      .syntax--value {
+        &.syntax--string {}
+        &.syntax--storage {}
+      }
+    }
+  }
+}
