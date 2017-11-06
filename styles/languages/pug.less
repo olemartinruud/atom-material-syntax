@@ -1,0 +1,40 @@
+// Pug - Jade styles
+
+.syntax--jade,
+.syntax--pug {
+  .syntax--tag {
+    color: @pink;
+  }
+
+  .syntax--constant {
+    color: @light-orange;
+
+    &.syntax--regexp {
+      color: @cyan;
+    }
+
+    &.syntax--numeric {
+      color: @orange;
+    }
+  }
+
+  .syntax--name {
+    &.syntax--function {
+      color: @cyan;
+    }
+  }
+
+  .syntax--entity {
+    &.syntax--other {
+      &.syntax--attribute-name {
+        color: @orange;
+      }
+    }
+
+    &.syntax--name {
+      &.syntax--function {
+        color: @blue;
+      }
+    }
+  }
+}
